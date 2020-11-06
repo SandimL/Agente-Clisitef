@@ -5,19 +5,18 @@ Projeto para execução de pagamentos via API com o auxílio do serviço AgenteC
 
 ## Como usar
 
-```
 Conecte um PinPad ao computador e execute a ultima versão do SitDemo
-```
 
-```
+
+
 Instancie a classe de pagamentos e um vetor para guardar as transações:
+```js
     let pag = new Pagamento()
     let transacoes = []
 ```
 
-```
 Instancie e popule uma ou mais transações(cartões) com os dados coletados:
-
+```js
     let transacao1 = new DadosDeTransacao()
     let transacao2 = new DadosDeTransacao()
     let transacao3 = new DadosDeTransacao()
@@ -46,8 +45,9 @@ Instancie e popule uma ou mais transações(cartões) com os dados coletados:
     transacoes.push(transacao1, transacao2, transacao3)
 ```
 
-```
+
 Agora, só iniciar um pagamento
+```js
     pag.inicarPagamento(transacoes)
 ```
 
