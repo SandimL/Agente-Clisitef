@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Pagamento.js"></script>
+    <script src="DadosDeTransacao.js"></script>
+    <script src="AgenteClisitefAPI.js"></script>
+    <script src="ConfiguracoesSitef.js"></script>
+    <script src="Enums.js"></script>
+    <script src="Util.js"></script>
+    <script>
+        let pag = new Pagamento()
+        let transacoes = []
+        let transacao1 = new DadosDeTransacao()
+        let transacao2 = new DadosDeTransacao()
+        let transacao3 = new DadosDeTransacao()
+
+        transacao1.Funcao = FuncaoPagamento.DEBITO
+        transacao1.Financiamento = FuncaoFinanciamento.A_VISTA
+        transacao1.NumeroDeParcelas = FuncaoFinanciamento.A_VISTA
+        transacao1.TipoCartaoSitef = TipoCartao.MAGNETICO_CHIP
+        transacao1.Valor = 100
+        transacao1.CupomFiscal = '000000'
+        
+        transacao2.Funcao = FuncaoPagamento.CREDITO
+        transacao2.Financiamento = FuncaoFinanciamento.A_VISTA
+        transacao2.NumeroDeParcelas = FuncaoFinanciamento.A_VISTA
+        transacao2.TipoCartaoSitef = TipoCartao.MAGNETICO_CHIP
+        transacao2.Valor = 1000
+        transacao2.CupomFiscal = '000000'
+
+        transacao3.Funcao = FuncaoPagamento.CREDITO
+        transacao3.Financiamento = FuncaoFinanciamento.PARCELADO
+        transacao3.NumeroDeParcelas = 5
+        transacao3.TipoCartaoSitef = TipoCartao.MAGNETICO_CHIP
+        transacao3.Valor = 10000
+        transacao3.CupomFiscal = '000000'
+
+        transacoes.push(transacao1, transacao2, transacao3)
+
+    </script>
+</head>
+<body>
+    <div id='txt'></div>
+    <button onclick="pag.inicarPagamento(transacoes)"> PAGAR</button>
+    <button onclick="pag.cancelar()"> CANCELA</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</body>
+</html>
