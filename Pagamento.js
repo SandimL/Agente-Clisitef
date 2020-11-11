@@ -1,16 +1,11 @@
 class Pagamento {
 
-  constructor() {
+  constructor(configuracoesSitef) {
     this.data = ''
     this.continua = 0
     this.transacao = ''
     this.clisitefApi = new AgenteClisitefAPI()
-    this.clisitefApi.ConfigurarSitef(
-      new ConfiguracoesSitef('127.0.0.1', '11400155', '5555555555',
-                    '[17;18;19;28;34;35;3031;];', '11467807000155',
-                    '11467807000155', 'CAIXA', 'SEXTA XERA'
-                  )
-    )
+    this.clisitefApi.ConfigurarSitef(configuracoesSitef)
   }
 
   inicarPagamento = async(transacoes) => {

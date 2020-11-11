@@ -11,7 +11,11 @@
     <script src="Enums.js"></script>
     <script src="Util.js"></script>
     <script>
-        let pag = new Pagamento()
+        let configuracoesSitef =  new ConfiguracoesSitef('127.0.0.1', '11400155', '5555555555',
+                                                '[17;18;19;28;34;35;3031;];', '11467807000155',
+                                                '11467807000155', 'CAIXA', 'SEXTA XERA' )
+                                                
+        let pag = new Pagamento(configuracoesSitef)
         let transacoes = []
         let transacao1 = new DadosDeTransacao()
         let transacao2 = new DadosDeTransacao()
