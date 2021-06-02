@@ -3,7 +3,7 @@ Exemplo básico de comunicação com o AgenteClisitef para execução de pagamen
 
 
 ## Requerimentos
-Para poder utilizar o AgenteClisitef de desenvolvimento, é necessário estar devidamente cadastrado e estar utilizando as ferramentas de teste da www.softwareexpress.com.br
+Para poder utilizar o AgenteClisitef de desenvolvimento, é necessário estar devidamente cadastrado e utilizar as ferramentas de teste da www.softwareexpress.com.br
 
 
 ## Como usar
