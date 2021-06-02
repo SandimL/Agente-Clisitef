@@ -1,12 +1,13 @@
 # AgenteClisitef
+Exemplo básico de comunicação com o AgenteClisitef para execução de pagamentos com o auxílio de um PinPad
 
-Projeto para execução de pagamentos via API com o auxílio do serviço AgenteClisitef e um PinPad
+
+## Requerimentos
+Para poder utilizar o AgenteClisitef de desenvolvimento, é necessário estar devidamente cadastrado e estar utilizando as ferramentas de teste da www.softwareexpress.com.br
 
 
 ## Como usar
-
 Conecte um PinPad ao computador e execute a ultima versão do SitDemo
-
 
 
 Instancie a classe de pagamentos e um vetor para guardar as transações:
