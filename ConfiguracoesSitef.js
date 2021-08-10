@@ -4,7 +4,7 @@ class ConfiguracoesSitef{
     {
         this.ip = ip
         let id = serial.substring(-1, -4)
-        this.idTerminal = "CF" + id
+        this.idTerminal = id
         this.idLoja = idLoja
         this.cnpjLoja = cnpjLoja
         this.cnpjCF = cnpjCF
